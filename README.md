@@ -113,7 +113,7 @@ MIT License - see LICENSE file for details
 
 ## 👨‍💻 Author
 
-Built with ⚡ by developers, for developers
+Built with ⚡ by Mutlu Kurt, for developers
 
 ---
 
