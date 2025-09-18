@@ -4,6 +4,21 @@
 
 A premium SaaS landing page built with modern web technologies, featuring 3D Spline integration, smooth animations, and performance-optimized design.
 
+## 🆕 Latest Updates (v2.0)
+
+### ⚡ Performance Optimizations
+- **Instant Spline Loading** - 3D scene loads immediately without loading screens
+- **Advanced Lazy Loading** - All images load asynchronously with `loading="lazy"`
+- **Bundle Splitting** - Vendor, animations, and Spline chunks for faster loading
+- **Mobile GPU Acceleration** - Hardware acceleration for smooth mobile experience
+- **Async Image Decoding** - Non-blocking image processing for better performance
+
+### 🎯 User Experience Improvements
+- **Zero Loading Delays** - Hero section appears instantly
+- **Optimized Mobile Performance** - Reduced motion and GPU optimizations
+- **Faster Time to Interactive** - Critical resources prioritized
+- **Smooth Scrolling** - Enhanced scroll performance across devices
+
 ## 🚀 Tech Stack
 
 - **React 18** + **TypeScript** - Modern React with full type safety
