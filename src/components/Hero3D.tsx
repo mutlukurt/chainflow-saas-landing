@@ -7,44 +7,17 @@ const Spline = lazy(() => import('@splinetool/react-spline'));
 
 const Hero3D: React.FC = () => {
   const [isSplineLoaded, setIsSplineLoaded] = useState(false);
-  const [shouldLoadSpline, setShouldLoadSpline] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setShouldLoadSpline(true);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    const heroElement = document.getElementById('hero-section');
-    if (heroElement) {
-      observer.observe(heroElement);
-    }
-
-    return () => {
-      if (heroElement) observer.unobserve(heroElement);
-    };
-  }, []);
 
   return (
     <section id="hero-section" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* 3D Spline Background */}
       <div className="absolute inset-0 w-full h-full">
-        {shouldLoadSpline && (
-          <Suspense fallback={
-            <div className="absolute inset-0 bg-bg-primary flex items-center justify-center">
-              <div className="animate-spin w-8 h-8 border-2 border-primary border-t-transparent rounded-full"></div>
-            </div>
-          }>
-            <Spline
-              scene="https://prod.spline.design/UcmdnM9ZeKVJX-t7/scene.splinecode"
-              onLoad={() => setIsSplineLoaded(true)}
-            />
-          </Suspense>
-        )}
+        <Suspense fallback={null}>
+          <Spline
+            scene="https://prod.spline.design/UcmdnM9ZeKVJX-t7/scene.splinecode"
+            onLoad={() => setIsSplineLoaded(true)}
+          />
+        </Suspense>
         
         {/* Gradient Overlays for depth and readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-transparent to-bg-primary/40"></div>

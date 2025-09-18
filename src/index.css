@@ -85,6 +85,13 @@ body {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
   }
+  
+  /* Optimize animations for mobile */
+  * {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
 }
 
 @media (max-width: 475px) {

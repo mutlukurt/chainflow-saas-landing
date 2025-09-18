@@ -267,6 +267,7 @@ function App() {
                     alt={`${useCase.title} icon`}
                     className="w-6 h-6 md:w-10 md:h-10 object-contain opacity-80 group-hover:opacity-100 transition-opacity"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 

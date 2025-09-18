@@ -30,6 +30,7 @@ const IntegrationIcon: React.FC<IntegrationIconProps> = ({ name, path, index }) 
           alt={`${name} logo`}
           className="w-full h-full object-contain"
           loading="lazy"
+          decoding="async"
         />
       </div>
       

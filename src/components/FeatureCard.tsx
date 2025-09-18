@@ -27,6 +27,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, icon, ind
           alt={`${title} icon`}
           className="w-full h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity"
           loading="lazy"
+          decoding="async"
         />
       </div>
       
